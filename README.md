@@ -29,10 +29,16 @@ A professional multi-page website for a shipping broker company operating in the
 
 ## Color Scheme
 
-- **Primary**: Navy Blue (#1E3A8A / HSL: 221 83% 32%)
-- **Accent**: Orange (#F59E0B / HSL: 38 92% 50%)
-- **Background**: Light Gray (#F9FAFB)
-- **Text**: Dark Gray (#111827)
+- **Primary**: Maroon (#8B2635 / HSL: 0 60% 35%)
+- **Accent**: Maroon (#8B2635 / HSL: 0 60% 35%)
+- **Background**: White (#FFFFFF)
+- **Text**: Dark Gray (#1A1A1A)
+
+## Language
+
+- **UI Language**: Urdu (اردو)
+- All user-facing text, buttons, navigation, and content are in Urdu
+- Admin dashboard remains in English for technical management
 
 ## Getting Started
 

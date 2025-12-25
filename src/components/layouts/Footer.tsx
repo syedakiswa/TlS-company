@@ -15,32 +15,32 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">ShipBroker</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Your trusted partner for freight brokerage and logistics solutions across the United States and North America.
+              ریاستہائے متحدہ اور شمالی امریکہ میں فریٹ بروکریج اور لاجسٹکس حل کے لیے آپ کا قابل اعتماد پارٹنر۔
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Quick Links</h3>
+            <h3 className="text-sm font-semibold text-foreground">فوری لنکس</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link to="/" className="text-sm text-muted-foreground hover:text-primary">
-                  Home
+                  ہوم
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary">
-                  About Us
+                  ہمارے بارے میں
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-sm text-muted-foreground hover:text-primary">
-                  Services
+                  خدمات
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary">
-                  Contact
+                  رابطہ
                 </Link>
               </li>
             </ul>
@@ -48,18 +48,18 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Services</h3>
+            <h3 className="text-sm font-semibold text-foreground">خدمات</h3>
             <ul className="mt-4 space-y-2">
-              <li className="text-sm text-muted-foreground">Freight Brokerage</li>
-              <li className="text-sm text-muted-foreground">Carrier Matching</li>
-              <li className="text-sm text-muted-foreground">Logistics Consulting</li>
-              <li className="text-sm text-muted-foreground">Tracking & Insurance</li>
+              <li className="text-sm text-muted-foreground">فریٹ بروکریج</li>
+              <li className="text-sm text-muted-foreground">کیریئر میچنگ</li>
+              <li className="text-sm text-muted-foreground">لاجسٹکس مشاورت</li>
+              <li className="text-sm text-muted-foreground">ٹریکنگ اور انشورنس</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Contact Us</h3>
+            <h3 className="text-sm font-semibold text-foreground">ہم سے رابطہ کریں</h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Shipping Broker Platform. All rights reserved.
+            © 2025 شپنگ بروکر پلیٹ فارم۔ تمام حقوق محفوظ ہیں۔
           </p>
         </div>
       </div>
