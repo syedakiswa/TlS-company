@@ -16,10 +16,10 @@ export function Header() {
   const { user, profile, signOut } = useAuth();
 
   const navigation = [
-    { name: 'ہوم', href: '/' },
-    { name: 'ہمارے بارے میں', href: '/about' },
-    { name: 'خدمات', href: '/services' },
-    { name: 'رابطہ', href: '/contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -56,7 +56,7 @@ export function Header() {
             <>
               {profile.role === 'admin' && (
                 <Button variant="outline" asChild>
-                  <Link to="/admin">ایڈمن ڈیش بورڈ</Link>
+                  <Link to="/admin">Admin Dashboard</Link>
                 </Button>
               )}
               <DropdownMenu>
@@ -64,17 +64,17 @@ export function Header() {
                   <Button variant="ghost">{profile.username}</Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={signOut}>لاگ آؤٹ</DropdownMenuItem>
+                  <DropdownMenuItem onClick={signOut}>Logout</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </>
           ) : (
             <Button variant="outline" asChild>
-              <Link to="/login">لاگ ان</Link>
+              <Link to="/login">Login</Link>
             </Button>
           )}
           <Button asChild>
-            <Link to="/quote">قیمت حاصل کریں</Link>
+            <Link to="/quote">Get a Quote</Link>
           </Button>
         </div>
 
@@ -118,11 +118,11 @@ export function Header() {
                     className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-secondary"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    ایڈمن ڈیش بورڈ
+                    Admin Dashboard
                   </Link>
                 )}
                 <div className="px-3 py-2 text-sm text-muted-foreground">
-                  لاگ ان: {profile.username}
+                  Logged in as {profile.username}
                 </div>
                 <button
                   onClick={() => {
@@ -131,7 +131,7 @@ export function Header() {
                   }}
                   className="block w-full rounded-md px-3 py-2 text-left text-base font-medium text-muted-foreground hover:bg-secondary"
                 >
-                  لاگ آؤٹ
+                  Logout
                 </button>
               </>
             ) : (
@@ -140,13 +140,13 @@ export function Header() {
                 className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-secondary"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                لاگ ان
+                Login
               </Link>
             )}
             <div className="pt-2">
               <Button className="w-full" asChild>
                 <Link to="/quote" onClick={() => setMobileMenuOpen(false)}>
-                  قیمت حاصل کریں
+                  Get a Quote
                 </Link>
               </Button>
             </div>
