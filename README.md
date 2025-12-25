@@ -1,91 +1,182 @@
-# Welcome to Your Miaoda Project
+# Shipping Broker Platform
 
-## Project Info
+A professional multi-page website for a shipping broker company operating in the United States and North America. The platform connects shippers with carriers, facilitating efficient freight brokerage and logistics solutions across the region.
 
-## Project Directory
+## Features
 
-```
-├── README.md # Documentation
-├── components.json # Component library configuration
-├── index.html # Entry file
-├── package.json # Package management
-├── postcss.config.js # PostCSS configuration
-├── public # Static resources directory
-│   ├── favicon.png # Icon
-│   └── images # Image resources
-├── src # Source code directory
-│   ├── App.tsx # Entry file
-│   ├── components # Components directory
-│   ├── context # Context directory
-│   ├── db # Database configuration directory
-│   ├── hooks # Common hooks directory
-│   ├── index.css # Global styles
-│   ├── layout # Layout directory
-│   ├── lib # Utility library directory
-│   ├── main.tsx # Entry file
-│   ├── routes.tsx # Routing configuration
-│   ├── pages # Pages directory
-│   ├── services # Database interaction directory
-│   ├── types # Type definitions directory
-├── tsconfig.app.json # TypeScript frontend configuration file
-├── tsconfig.json # TypeScript configuration file
-├── tsconfig.node.json # TypeScript Node.js configuration file
-└── vite.config.ts # Vite configuration file
-```
+### Public Pages
+- **Home Page**: Hero section with company value proposition, features, how we work timeline, and services overview
+- **About Us**: Company story, mission & vision, core values, and team member profiles
+- **Services**: Detailed service offerings including freight brokerage, carrier matching, logistics consulting, and tracking & insurance
+- **Contact**: Contact form with Formspree integration, contact details sidebar, and embedded Google Maps
+- **Get a Quote**: Comprehensive quote request form with shipment details collection
+
+### Admin Dashboard
+- **Analytics Dashboard**: Real-time statistics with charts showing submission status distribution and types
+- **Submissions Management**: View, search, filter, and manage contact forms and quote requests
+- **Settings**: Application configuration and information
+- **Authentication**: Secure login system with role-based access (admin/user)
 
 ## Tech Stack
 
-Vite, TypeScript, React, Supabase
+- **Frontend**: React 18 + TypeScript + Vite
+- **UI Components**: shadcn/ui + Tailwind CSS
+- **Forms**: React Hook Form + Zod validation
+- **Backend**: Supabase (PostgreSQL database + Authentication)
+- **Charts**: Recharts
+- **Email**: Formspree integration
+- **Routing**: React Router v6
 
-## Development Guidelines
+## Color Scheme
 
-### How to edit code locally?
+- **Primary**: Navy Blue (#1E3A8A / HSL: 221 83% 32%)
+- **Accent**: Orange (#F59E0B / HSL: 38 92% 50%)
+- **Background**: Light Gray (#F9FAFB)
+- **Text**: Dark Gray (#111827)
 
-You can choose [VSCode](https://code.visualstudio.com/Download) or any IDE you prefer. The only requirement is to have Node.js and npm installed.
+## Getting Started
 
-### Environment Requirements
+### Prerequisites
 
-```
-# Node.js ≥ 20
-# npm ≥ 10
-Example:
-# node -v   # v20.18.3
-# npm -v    # 10.8.2
-```
-
-### Installing Node.js on Windows
-
-```
-# Step 1: Visit the Node.js official website: https://nodejs.org/, click download. The website will automatically suggest a suitable version (32-bit or 64-bit) for your system.
-# Step 2: Run the installer: Double-click the downloaded installer to run it.
-# Step 3: Complete the installation: Follow the installation wizard to complete the process.
-# Step 4: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
+```bash
+Node.js ≥ 20
+npm ≥ 10
 ```
 
-### Installing Node.js on macOS
+### Installation
 
-```
-# Step 1: Using Homebrew (Recommended method): Open Terminal. Type the command `brew install node` and press Enter. If Homebrew is not installed, you need to install it first by running the following command in Terminal:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Alternatively, use the official installer: Visit the Node.js official website. Download the macOS .pkg installer. Open the downloaded .pkg file and follow the prompts to complete the installation.
-# Step 2: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
-```
-
-### After installation, follow these steps:
-
-```
-# Step 1: Download the code package
-# Step 2: Extract the code package
-# Step 3: Open the code package with your IDE and navigate into the code directory
-# Step 4: In the IDE terminal, run the command to install dependencies: npm i
-# Step 5: In the IDE terminal, run the command to start the development server: npm run dev -- --host 127.0.0.1
-# Step 6: if step 5 failed, try this command to start the development server: npx vite --host 127.0.0.1
+1. Extract the code package
+2. Open the project in your IDE
+3. Install dependencies:
+```bash
+npm install
 ```
 
-### How to develop backend services?
+4. Start the development server:
+```bash
+npm run dev -- --host 127.0.0.1
+```
 
-Configure environment variables and install relevant dependencies.If you need to use a database, please use the official version of Supabase.
+Or alternatively:
+```bash
+npx vite --host 127.0.0.1
+```
 
-## Learn More
+5. Open your browser and navigate to the provided local URL
 
-You can also check the help documentation: Download and Building the app（ [https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en](https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en)）to learn more detailed content.
+## First Time Setup
+
+### Create Admin Account
+
+1. Navigate to the login page
+2. Click on the "Sign Up" tab
+3. Create your account with a username and password
+4. **Important**: The first user to register will automatically become an admin
+
+### Access Admin Dashboard
+
+1. After logging in as admin, you'll see an "Admin Dashboard" button in the header
+2. Click it to access the admin panel where you can:
+   - View analytics and statistics
+   - Manage contact submissions and quote requests
+   - Update submission statuses
+   - View detailed information about each submission
+
+## Database
+
+The application uses Supabase for backend services:
+
+- **Authentication**: Username/password authentication (simulated email format)
+- **Database Tables**:
+  - `profiles`: User profiles with role management
+  - `contact_submissions`: Contact form submissions
+  - `quote_requests`: Quote request submissions
+- **Row Level Security**: Enabled with policies for admin and user access
+
+## Email Notifications
+
+Contact forms and quote requests are configured to send email notifications via Formspree. The current endpoint is a placeholder - you should:
+
+1. Sign up for a free Formspree account at https://formspree.io
+2. Create a new form
+3. Replace the Formspree endpoint in:
+   - `src/pages/ContactPage.tsx`
+   - `src/pages/QuotePage.tsx`
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── layouts/          # Header and Footer components
+│   ├── ui/              # shadcn/ui components
+│   └── common/          # RouteGuard and other common components
+├── contexts/            # React contexts (AuthContext)
+├── db/                  # Database configuration and API functions
+│   ├── supabase.ts     # Supabase client
+│   └── api.ts          # Database API functions
+├── hooks/              # Custom React hooks
+├── pages/              # Page components
+│   ├── admin/          # Admin dashboard pages
+│   ├── HomePage.tsx
+│   ├── AboutPage.tsx
+│   ├── ServicesPage.tsx
+│   ├── ContactPage.tsx
+│   ├── QuotePage.tsx
+│   └── LoginPage.tsx
+├── types/              # TypeScript type definitions
+├── App.tsx             # Main app component
+├── routes.tsx          # Route configuration
+└── index.css           # Global styles and design tokens
+```
+
+## Development
+
+### Running Lint
+
+```bash
+npm run lint
+```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+## Key Features Implementation
+
+### Authentication
+- Username/password authentication using Supabase Auth
+- First registered user automatically becomes admin
+- Role-based access control (admin/user)
+- Protected routes with RouteGuard
+
+### Forms
+- React Hook Form for form management
+- Zod schema validation
+- Real-time validation feedback
+- Formspree integration for email notifications
+- Database storage for all submissions
+
+### Admin Dashboard
+- Real-time analytics with Recharts
+- Submission management with search and filters
+- Pagination for large datasets
+- Status management (pending/completed)
+- Detailed view dialogs for submissions
+
+### Responsive Design
+- Desktop-first approach
+- Mobile-responsive navigation with hamburger menu
+- Responsive tables and cards
+- Touch-friendly interface elements
+
+## Support
+
+For more information, visit the Miaoda documentation:
+https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en
+
+## License
+
+© 2025 Shipping Broker Platform. All rights reserved.
