@@ -68,7 +68,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=1080&fit=crop"
-            alt="Background"
+            alt="پس منظر"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />
@@ -78,18 +78,18 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
             <div className="flex flex-col justify-center">
               <h1 className="text-4xl font-bold text-white lg:text-5xl xl:text-6xl">
-                Your Trusted Freight Brokerage Partner
+                آپ کا قابل اعتماد فریٹ بروکریج پارٹنر
               </h1>
               <p className="mt-6 text-lg text-white/90">
-                Connecting shippers with reliable carriers across the United States and North America. 
-                Fast, efficient, and cost-effective logistics solutions for your business.
+                ریاستہائے متحدہ اور شمالی امریکہ میں بھروسہ مند کیریئرز کے ساتھ شپرز کو جوڑنا۔ 
+                آپ کے کاروبار کے لیے تیز، موثر اور سرمایہ کاری مؤثر لاجسٹکس حل۔
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button size="lg" asChild>
-                  <Link to="/quote">Get a Quote</Link>
+                  <Link to="/quote">قیمت حاصل کریں</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20" asChild>
-                  <Link to="/services">Our Services</Link>
+                  <Link to="/services">ہماری خدمات</Link>
                 </Button>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function HomePage() {
               <div className="relative h-64 w-full lg:h-96">
                 <img
                   src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop"
-                  alt="Freight truck"
+                  alt="فریٹ ٹرک"
                   className="h-full w-full rounded-lg object-cover shadow-2xl"
                 />
               </div>
@@ -110,9 +110,9 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground lg:text-4xl">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold text-foreground lg:text-4xl">ہمیں کیوں منتخب کریں</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              We deliver excellence in every shipment with our proven expertise
+              ہم ہر شپمنٹ میں اپنی ثابت شدہ مہارت کے ساتھ بہترین کارکردگی فراہم کرتے ہیں
             </p>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -139,7 +139,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1920&h=1080&fit=crop"
-            alt="Background"
+            alt="پس منظر"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
@@ -147,9 +147,9 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl">How We Work</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl">ہم کیسے کام کرتے ہیں</h2>
             <p className="mt-4 text-lg text-white/90">
-              Simple, transparent process from quote to delivery
+              قیمت سے ڈیلیوری تک آسان اور شفاف عمل
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -175,9 +175,9 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground lg:text-4xl">Our Services</h2>
+            <h2 className="text-3xl font-bold text-foreground lg:text-4xl">ہماری خدمات</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Comprehensive logistics solutions tailored to your needs
+              آپ کی ضروریات کے مطابق جامع لاجسٹکس حل
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -197,7 +197,7 @@ export default function HomePage() {
           </div>
           <div className="mt-12 text-center">
             <Button size="lg" asChild>
-              <Link to="/services">View All Services</Link>
+              <Link to="/services">تمام خدمات دیکھیں</Link>
             </Button>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&h=1080&fit=crop"
-            alt="Background"
+            alt="پس منظر"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/65" />
@@ -217,17 +217,17 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center lg:px-8">
           <h2 className="text-3xl font-bold text-white lg:text-4xl">
-            Ready to Ship with Confidence?
+            اعتماد کے ساتھ شپ کرنے کے لیے تیار ہیں؟
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Get a free quote today and experience the difference of working with a trusted freight broker.
+            آج ہی مفت قیمت حاصل کریں اور ایک قابل اعتماد فریٹ بروکر کے ساتھ کام کرنے کا فرق محسوس کریں۔
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" asChild>
-              <Link to="/quote">Get a Quote</Link>
+              <Link to="/quote">قیمت حاصل کریں</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20" asChild>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">ہم سے رابطہ کریں</Link>
             </Button>
           </div>
         </div>
