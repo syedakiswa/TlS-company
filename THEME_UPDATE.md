@@ -1,72 +1,62 @@
-# تھیم اپ ڈیٹ - Theme Update
+# Theme Update - Maroon Color Scheme with Background Images
 
-## تبدیلیاں - Changes Made
+## Changes Made
 
-### 1. رنگ سکیم - Color Scheme
-- **پرانا رنگ - Old Color**: نیوی بلیو اور اورنج (Navy Blue & Orange)
-- **نیا رنگ - New Color**: مارون (Maroon)
-  - Primary: `hsl(0 60% 35%)` - گہرا مارون (Dark Maroon)
-  - Accent: `hsl(0 60% 35%)` - مارون (Maroon)
-  - تمام بٹن، کارڈز اور اہم عناصر اب مارون رنگ میں ہیں
+### 1. Color Scheme
+- **Old Colors**: Navy Blue (#1E3A8A) and Orange (#F59E0B)
+- **New Color**: Maroon
+  - Primary: `hsl(0 60% 35%)` - Dark Maroon
+  - Accent: `hsl(0 60% 35%)` - Maroon
+  - All buttons, cards, and key elements now use maroon color
 
-### 2. پس منظر کی تصاویر - Background Images
-تمام اہم سیکشنز میں پس منظر کی تصاویر شامل کی گئی ہیں:
+### 2. Background Images
+Added background images to all major sections:
 
-#### ہیرو سیکشن - Hero Section
-- **تصویر**: فریٹ ٹرکس کی تصویر
-- **اوورلے**: سیاہ 60% (`bg-black/60`)
-- **متن**: سفید رنگ میں
+#### Hero Section
+- **Image**: Freight trucks on highway
+- **Overlay**: Black 60% opacity (`bg-black/60`)
+- **Text**: White color for contrast
 
-#### "ہم کیسے کام کرتے ہیں" سیکشن - How We Work Section
-- **تصویر**: لاجسٹکس اور گودام کی تصویر
-- **اوورلے**: سیاہ 70% (`bg-black/70`)
-- **متن**: سفید رنگ میں
+#### "How We Work" Section
+- **Image**: Logistics and warehouse
+- **Overlay**: Black 70% opacity (`bg-black/70`)
+- **Text**: White color for contrast
 
-#### کال ٹو ایکشن سیکشن - CTA Section
-- **تصویر**: شپنگ کنٹینرز کی تصویر
-- **اوورلے**: سیاہ 65% (`bg-black/65`)
-- **متن**: سفید رنگ میں
+#### Call-to-Action Section
+- **Image**: Shipping containers
+- **Overlay**: Black 65% opacity (`bg-black/65`)
+- **Text**: White color for contrast
 
-### 3. اردو زبان - Urdu Language
-تمام UI عناصر کو اردو میں تبدیل کیا گیا:
+### 3. Design Improvements
+- Changed all button colors from orange to maroon
+- Updated card icon backgrounds from orange to maroon
+- Added hover effects to cards (`hover:shadow-lg transition-shadow`)
+- Changed CheckCircle icons from accent (orange) to primary (maroon)
+- Updated step number circles from accent to primary color
+- Maintained white background for main content areas
+- Cards with semi-transparent backgrounds on overlay sections (`bg-card/95 backdrop-blur`)
 
-#### ہیڈر - Header
-- ہوم، ہمارے بارے میں، خدمات، رابطہ
-- لاگ ان / لاگ آؤٹ
-- ایڈمن ڈیش بورڈ
-- قیمت حاصل کریں
+### 4. Content Language
+- All UI elements remain in English
+- Navigation: Home, About Us, Services, Contact
+- Authentication: Login / Logout / Admin Dashboard
+- Call-to-Action: Get a Quote, Contact Us
+- All page content in English
 
-#### فوٹر - Footer
-- فوری لنکس
-- خدمات
-- ہم سے رابطہ کریں
-- کاپی رائٹ متن
+## Files Modified
 
-#### ہوم پیج - Home Page
-- آپ کا قابل اعتماد فریٹ بروکریج پارٹنر
-- ہمیں کیوں منتخب کریں
-- ہم کیسے کام کرتے ہیں
-- ہماری خدمات
-- اعتماد کے ساتھ شپ کرنے کے لیے تیار ہیں؟
+1. **src/index.css** - Complete maroon color scheme
+2. **src/pages/HomePage.tsx** - Background images with overlays
+3. **src/components/layouts/Header.tsx** - Updated navigation
+4. **src/components/layouts/Footer.tsx** - Updated footer
+5. **README.md** - Updated color scheme and design features
 
-### 4. ڈیزائن بہتری - Design Improvements
-- تمام کارڈز میں hover effect شامل کیا گیا
-- بٹنز کا رنگ مارون میں تبدیل کیا گیا
-- پس منظر سفید رہتا ہے (white background)
-- تصاویر کے ساتھ سیاہ اوورلے اور سفید متن
+## Result
 
-## فائلیں تبدیل کی گئیں - Files Modified
-
-1. **src/index.css** - مارون رنگ سکیم
-2. **src/pages/HomePage.tsx** - پس منظر کی تصاویر اور اردو متن
-3. **src/components/layouts/Header.tsx** - اردو نیویگیشن
-4. **src/components/layouts/Footer.tsx** - اردو فوٹر
-
-## نتیجہ - Result
-
-✅ تھیم مارون رنگ میں تبدیل ہو گیا
-✅ تمام اہم سیکشنز میں پس منظر کی تصاویر
-✅ سیاہ اوورلے کے ساتھ سفید متن
-✅ مکمل اردو UI
-✅ صاف سفید پس منظر
-✅ تمام بٹن اور کارڈز مارون رنگ میں
+✅ Theme changed to maroon color
+✅ Background images in all major sections
+✅ Black overlays with white text for readability
+✅ Clean white background for content areas
+✅ All buttons and cards in maroon color
+✅ Professional and modern design
+✅ Excellent contrast and accessibility

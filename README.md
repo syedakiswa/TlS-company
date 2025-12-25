@@ -34,11 +34,13 @@ A professional multi-page website for a shipping broker company operating in the
 - **Background**: White (#FFFFFF)
 - **Text**: Dark Gray (#1A1A1A)
 
-## Language
+## Design Features
 
-- **UI Language**: Urdu (اردو)
-- All user-facing text, buttons, navigation, and content are in Urdu
-- Admin dashboard remains in English for technical management
+- **Background Images**: Hero, "How We Work", and CTA sections feature full-width background images with dark overlays
+- **Overlays**: Black overlays (60-70% opacity) on background images for text readability
+- **White Text on Overlays**: Clean white text on dark backgrounds for excellent contrast
+- **Maroon Accents**: All buttons, cards, and interactive elements use maroon color
+- **Hover Effects**: Cards feature shadow effects on hover for better interactivity
 
 ## Getting Started
 
