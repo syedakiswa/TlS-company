@@ -6,9 +6,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "tsgo -p tsconfig.check.json; npx biome lint; .rules/check.sh;npx tailwindcss -i ./src/index.css -o /dev/null 2>&1 | grep -E '^(CssSyntaxError|Error):.*' || true;.rules/testBuild.sh"
+        "lint": "tsgo -p tsconfig.check.json; npx biome lint; .rules/check.sh; npx tailwindcss -i ./src/index.css -o /dev/null 2>&1 | grep -E '^(CssSyntaxError|Error):.*' || true; .rules/testBuild.sh"
     },
-
     "dependencies": {
         "@hookform/resolvers": "^5.2.2",
         "@radix-ui/react-accordion": "^1.2.12",
@@ -75,16 +74,15 @@
         "@biomejs/biome": "2.3.4",
         "@tailwindcss/container-queries": "^0.1.1",
         "@types/lodash": "^4.17.20",
-        "@types/node": "^25.0.3",
-        "@types/react": "^19.2.2",
-        "@types/react-dom": "^19.2.2",
+        "@types/node": "^20.11.0",
+        "@types/react": "^18.2.66",
+        "@types/react-dom": "^18.2.22",
         "@types/video-react": "^0.15.8",
-        "@typescript/native-preview": "7.0.0-dev.20251103.1",
         "@vitejs/plugin-react": "^4.3.4",
         "autoprefixer": "^10.4.21",
         "postcss": "^8.5.6",
         "tailwindcss": "^3.4.11",
-        "typescript": "~5.9.3",
+        "typescript": "~5.4.5",
         "vite": "^5.1.4",
         "vite-plugin-svgr": "^4.5.0"
     }
