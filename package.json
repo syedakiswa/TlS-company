@@ -6,7 +6,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "tsgo -p tsconfig.check.json; npx biome lint; .rules/check.sh; npx tailwindcss -i ./src/index.css -o /dev/null 2>&1 | grep -E '^(CssSyntaxError|Error):.*' || true; .rules/testBuild.sh"
+        "lint": "tsgo -p tsconfig.check.json; npx biome lint; .rules/check.sh;npx tailwindcss -i ./src/index.css -o /dev/null 2>&1 | grep -E '^(CssSyntaxError|Error):.*' || true;.rules/testBuild.sh"
     },
     "dependencies": {
         "@hookform/resolvers": "^5.2.2",
@@ -44,12 +44,12 @@
         "date-fns": "^3.6.0",
         "embla-carousel-react": "^8.6.0",
         "eventsource-parser": "^3.0.6",
+        "framer-motion": "^10.12.16",
         "input-otp": "^1.4.2",
         "ky": "^1.13.0",
         "lucide-react": "^0.553.0",
         "miaoda-auth-react": "2.0.6",
         "miaoda-sc-plugin": "^1.0.38",
-        "motion": "^12.23.25",
         "next-themes": "^0.4.6",
         "qrcode": "^1.5.4",
         "react": "^18.0.0",
