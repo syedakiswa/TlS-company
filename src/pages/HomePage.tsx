@@ -131,20 +131,19 @@ export default function HomePage() {
 
  return (
  <div className="flex min-h-screen w-full flex-col">
- <section
- data-aos="fade-up"
- className="hero-section min-h-[80vh] relative m-5 rounded-4xl overflow-hidden flex items-center justify-center"
- >
- {/* Background Image */}
- <img
- className="absolute w-full h-full object-cover"
- src="/hero.webp"
- alt="Hero Image"
- />
+<section
+  data-aos="fade-up"
+  className="hero-section min-h-[80vh] relative  flex items-center justify-center"
+>
+  {/* Background Image */}
+  <img
+    className="absolute inset-0 w-full h-full object-cover overflow-hidden rounded-4xl"
+    src="/hero.webp"
+    alt="Hero Image"
+  />
 
- {/* Black overlay */}
- <div className="absolute w-full h-full bg-black opacity-80"></div>
-
+  {/* Black overlay */}
+  <div className="absolute inset-0 w-full h-full bg-black opacity-80 rounded-4xl"></div>
  {/* Content Container */}
  <motion.div
  initial={{ opacity: 0 }}
@@ -597,8 +596,15 @@ export default function HomePage() {
  >
  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
  <Button size="lg" className="shadow-lg hover:shadow-xl transition-all" asChild>
- <Link to="/services">View All Services</Link>
- </Button>
+  <Link 
+    to="/services" 
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    className="no-underline"
+  >
+    View All Services
+  </Link>
+</Button>
+
  </motion.div>
  </motion.div>
  </div>

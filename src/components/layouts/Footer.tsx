@@ -28,11 +28,17 @@ export function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="mt-6 flex gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-700">
-                <Facebook className="h-5 w-5 text-white" />
-              </div>
-            </div>
+        <div className="mt-6 flex gap-3">
+  <a 
+    href="https://www.facebook.com/profile.php?id=61582908614957&rdid=dH9R4M3ceJClDh1b&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1SZt3YG49f%2F#" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex h-10 w-10 items-center justify-center rounded-full bg-red-700 hover:bg-red-800 transition-colors"
+  >
+    <Facebook className="h-5 w-5 text-white" />
+  </a>
+</div>
+
           </div>
 
           {/* Quick Links */}

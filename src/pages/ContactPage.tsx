@@ -187,9 +187,9 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    123 Logistics Ave, Suite 100<br />
-                    Chicago, IL 60601<br />
-                    United States
+                    Nationwide USA & North America
+
+
                   </p>
                 </CardContent>
               </Card>
@@ -203,8 +203,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Main: (555) 123-4567<br />
-                    Toll Free: (800) 555-0123
+                    (734) 301-1570
                   </p>
                 </CardContent>
               </Card>
@@ -218,27 +217,12 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    General: info@shipbroker.com<br />
-                    Support: support@shipbroker.com
+                   transportlogisticalsolutions@gmail.com
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-border">
-                <CardHeader>
-                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-                    <Clock className="h-6 w-6 text-accent-foreground" />
-                  </div>
-                  <CardTitle>Business Hours</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Monday - Friday: 8:00 AM - 6:00 PM<br />
-                    Saturday: 9:00 AM - 2:00 PM<br />
-                    Sunday: Closed
-                  </p>
-                </CardContent>
-              </Card>
+           
             </div>
           </div>
         </div>

@@ -165,34 +165,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="bg-secondary py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground lg:text-4xl">Meet Our Team</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Experienced professionals dedicated to your success
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member) => (
-              <Card key={member.name} className="border-border text-center">
-                <CardHeader>
-                  <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <CardTitle>{member.name}</CardTitle>
-                  <CardDescription>{member.role}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+  
     </div>
   );
 }
