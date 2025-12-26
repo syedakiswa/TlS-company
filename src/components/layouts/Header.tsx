@@ -29,10 +29,10 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <Truck className="h-6 w-6 text-primary-foreground" />
+          <div className="flex  items-center justify-center rounded-lg">
+            <img src='/logo.webp' className="h-20 w-32" />
           </div>
-          <span className="text-xl font-bold text-foreground">ShipBroker</span>
+          
         </Link>
 
         {/* Desktop Navigation */}

@@ -9,6 +9,7 @@ import * as z from 'zod';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Truck } from 'lucide-react';
 
@@ -92,10 +93,11 @@ export default function LoginPage() {
     <div className="flex min-h-screen w-full items-center justify-center bg-secondary px-4 py-12">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-primary">
-            <Truck className="h-8 w-8 text-primary-foreground" />
+      <Link to='/'>
+          <div className="mx-auto mb-4 flex  items-center justify-center rounded-lg ">
+            <img src='/logo.webp' className="h-20 w-32 " />
           </div>
-          <h1 className="text-3xl font-bold text-foreground">ShipBroker</h1>
+</Link>
           <p className="mt-2 text-muted-foreground">Sign in to access your account</p>
         </div>
 

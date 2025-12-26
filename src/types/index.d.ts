@@ -1,3 +1,5 @@
+import type React from "react";
+
 export interface Option {
   label: string;
   value: string;
@@ -5,7 +7,7 @@ export interface Option {
   withCount?: boolean;
 }
 
-export type UserRole = 'user' | 'admin';
+export type UserRole = "user" | "admin";
 
 export interface Profile {
   id: string;
@@ -22,7 +24,7 @@ export interface ContactSubmission {
   email: string;
   phone: string | null;
   message: string;
-  status: 'pending' | 'completed';
+  status: "pending" | "completed";
   created_at: string;
   updated_at: string;
 }
@@ -40,7 +42,7 @@ export interface QuoteRequest {
   dimensions: string | null;
   pickup_date: string | null;
   additional_info: string | null;
-  status: 'pending' | 'completed';
+  status: "pending" | "completed";
   created_at: string;
   updated_at: string;
 }

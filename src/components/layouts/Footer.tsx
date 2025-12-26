@@ -1,98 +1,126 @@
-import { Link } from 'react-router-dom';
-import { Truck, Mail, Phone, MapPin, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom'
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Check
+} from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-gradient-to-b from-black to-neutral-900 text-white">
+      <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Truck className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">ShipBroker</span>
-            </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Your trusted partner for freight brokerage and logistics solutions across the United States and North America.
+            <img
+              src="/logo.webp"
+              alt="TLS Logo"
+              className="mb-4 h-12"
+            />
+
+            <p className="text-sm text-gray-300 leading-relaxed max-w-xs">
+              Your trusted transportation brokerage connecting shippers with reliable carriers nationwide.
             </p>
+
+            {/* Social Icons */}
+            <div className="mt-6 flex gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-700">
+                <Facebook className="h-5 w-5 text-white" />
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Quick Links</h3>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/quote">Request a Quote</Link></li>
+            </ul>
+          </div>
+
+          {/* Our Services */}
+          <div>
+            <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-red-600" />
+                Freight Brokerage
               </li>
-              <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About Us
-                </Link>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-red-600" />
+                Full Truckload (FTL)
               </li>
-              <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Services
-                </Link>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-red-600" />
+                Less Than Truckload (LTL)
               </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact
-                </Link>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-red-600" />
+                Nationwide Coverage
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-red-600" />
+                24/7 Load Management
               </li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Contact Us */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Services</h3>
-            <ul className="mt-4 space-y-2">
-              <li className="text-sm text-muted-foreground">Freight Brokerage</li>
-              <li className="text-sm text-muted-foreground">Carrier Matching</li>
-              <li className="text-sm text-muted-foreground">Logistics Consulting</li>
-              <li className="text-sm text-muted-foreground">Tracking & Insurance</li>
-            </ul>
-          </div>
+            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
+            <ul className="space-y-4 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-red-600 mt-1" />
+                <div>
+                  <p className="font-semibold text-white">Phone (24/7)</p>
+                  <p>(734) 301-1570</p>
+                </div>
+              </li>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground">Contact Us</h3>
-            <ul className="mt-4 space-y-3">
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>123 Logistics Ave, Suite 100<br />Chicago, IL 60601</span>
+              <li className="flex items-start gap-3">
+                <Mail className="h-4 w-4 text-red-600 mt-1" />
+                <div>
+                  <p className="font-semibold text-white">Email</p>
+                  <p>transportlogisticalsolutions@gmail.com</p>
+                </div>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 shrink-0" />
-                <span>(555) 123-4567</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 shrink-0" />
-                <span>info@shipbroker.com</span>
+
+              <li className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-red-600 mt-1" />
+                <div>
+                  <p className="font-semibold text-white">Service Area</p>
+                  <p>Nationwide USA & North America</p>
+                </div>
               </li>
             </ul>
-            <div className="mt-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-            </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 Shipping Broker Platform. All rights reserved.
+        {/* Divider */}
+        <div className="my-10 h-px bg-white/10" />
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-400 md:flex-row">
+          <p>
+            © 2025 Transport Logistical Solutions, LLC. All rights reserved.
           </p>
+
+          <div className="flex gap-6">
+            <span className="cursor-pointer hover:text-white">Privacy Policy</span>
+            <span className="cursor-pointer hover:text-white">Terms of Service</span>
+          </div>
         </div>
+
       </div>
     </footer>
-  );
+  )
 }
