@@ -61,3 +61,47 @@ const App: React.FC = () => {
 };
 
 export default App;
+// src/App.tsx
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { ProtectedRoute } from './components/ProtectedRoute';
+// import LoginPage from './pages/LoginPage';
+// import AdminDashboard from './pages/admin/AdminDashboard';
+// import { Header } from '@/components/layouts/Header';
+// import { Footer } from '@/components/layouts/Footer';
+// import HomePage from './pages/HomePage';
+// import AboutPage from './pages/AboutPage';
+// // ... other imports
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         {/* Public routes */}
+//         <Route path="/" element={<HomePage />} />
+//         <Route path="/about" element={<AboutPage />} />
+//         <Route path="/login" element={<LoginPage />} />
+        
+//         {/* Protected routes */}
+//         <Route 
+//           path="/admin" 
+//           element={
+//             <ProtectedRoute>
+//               <AdminDashboard />
+//             </ProtectedRoute>
+//           } 
+//         />
+        
+//         <Route 
+//           path="/dashboard" 
+//           element={
+//             <ProtectedRoute>
+//               <AdminDashboard/>
+//             </ProtectedRoute>
+//           } 
+//         />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;

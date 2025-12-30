@@ -30,7 +30,7 @@ export function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="flex  items-center justify-center rounded-lg">
-            <img src='/logo.webp' className="h-16 w-26 " />
+            <img src='/logo.webp' className="h-20 w-48 " />
           </div>
           
         </Link>
