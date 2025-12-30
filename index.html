@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,6 +12,77 @@
     <script type="module" src="/src/main.tsx"></script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger intent="WELCOME" chat-title="Dialogflow-gemini" agent-id="33423db8-c724-44fa-9670-1a4202246060" language-code="en"></df-messenger>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        /* 🔒 HARD MOBILE OVERFLOW LOCK */
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #root {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        /* 🤖 Dialogflow Messenger FIX */
+        
+        df-messenger {
+            position: fixed !important;
+            right: 12px !important;
+            bottom: 16px !important;
+            max-width: 92vw !important;
+            overflow: hidden !important;
+            z-index: 9999;
+            --df-messenger-button-titlebar-color: #dc2626;
+            --df-messenger-chat-background-color: #ffffff;
+            --df-messenger-font-color: #111827;
+            --df-messenger-user-message: #dc2626;
+        }
+        
+        df-messenger-chat {
+            max-width: 92vw !important;
+        }
+        
+        @media (max-width: 768px) {
+            df-messenger {
+                right: 8px !important;
+                bottom: 12px !important;
+                max-width: 90vw !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark:bg-gray-900 overflow-x-hidden">
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <df-messenger intent="WELCOME" chat-title="TLS Chatbot" agent-id="33423db8-c724-44fa-9670-1a4202246060" language-code="en"></df-messenger>
 </body>
 
 </html>
