@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,12 +10,11 @@
 <body class="dark:bg-gray-900">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger intent="WELCOME" chat-title="Dialogflow-gemini" agent-id="33423db8-c724-44fa-9670-1a4202246060" language-code="en"></df-messenger>
+
 </body>
 
-</html> -->
-<!DOCTYPE html>
+</html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,9 +51,11 @@
             position: fixed !important;
             right: 12px !important;
             bottom: 16px !important;
-            max-width: 92vw !important;
+            width: auto !important;
+            max-width: 400px !important;
             overflow: hidden !important;
             z-index: 9999;
+            pointer-events: auto !important;
             --df-messenger-button-titlebar-color: #dc2626;
             --df-messenger-chat-background-color: #ffffff;
             --df-messenger-font-color: #111827;
@@ -62,14 +63,34 @@
         }
         
         df-messenger-chat {
-            max-width: 92vw !important;
+            width: 350px !important;
+            max-width: 350px !important;
         }
+        /* Mobile ke liye proper sizing */
         
         @media (max-width: 768px) {
             df-messenger {
                 right: 8px !important;
                 bottom: 12px !important;
-                max-width: 90vw !important;
+                width: auto !important;
+                max-width: 340px !important;
+            }
+            df-messenger-chat {
+                width: 320px !important;
+                max-width: 320px !important;
+            }
+        }
+        /* Chhoti screens ke liye */
+        
+        @media (max-width: 480px) {
+            df-messenger {
+                right: 8px !important;
+                bottom: 12px !important;
+                max-width: calc(100vw - 16px) !important;
+            }
+            df-messenger-chat {
+                width: calc(100vw - 16px) !important;
+                max-width: calc(100vw - 16px) !important;
             }
         }
     </style>
@@ -85,4 +106,4 @@
     <df-messenger intent="WELCOME" chat-title="TLS Chatbot" agent-id="33423db8-c724-44fa-9670-1a4202246060" language-code="en"></df-messenger>
 </body>
 
-</html>
+</html> -->
