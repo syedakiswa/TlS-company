@@ -3,8 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Truck, Users, TrendingUp, Shield, Package, MapPin, Clock, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PageMeta  from '../components/common/PageMeta'
 
 export default function ServicesPage() {
+  <PageMeta
+  title="Freight Services | FTL, LTL & Expedited Shipping"
+  description="Professional freight services including FTL, LTL and expedited shipping."
+/>
+
   const services = [
     {
       icon: Truck,

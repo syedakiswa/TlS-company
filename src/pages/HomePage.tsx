@@ -4,8 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { CheckCircle, Zap, Briefcase, MessageCircle, Clock, Shield, TrendingUp, Truck, Users, Rocket, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import PageMeta from "@/components/common/PageMeta";
 
 export default function HomePage() {
+    <PageMeta
+        title="Transport Logistical Solutions | Freight & Logistics USA"
+        description="Reliable freight & logistics services across USA & North America. FTL, LTL, expedited shipping."
+      />
  const [dotActive, setDotActive] = useState(true);
 
  useEffect(() => {

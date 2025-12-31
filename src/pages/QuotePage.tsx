@@ -10,6 +10,7 @@ import * as z from 'zod';
 import { createQuoteRequest } from '@/db/api';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
+import PageMeta from '@/components/common/PageMeta';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -28,6 +29,10 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function QuotePage() {
+     <PageMeta
+        title="Get Free Freight Quote | Transport Logistical Solutions"
+        description="Request a free freight quote for FTL, LTL or expedited shipping. Fast response and competitive rates."
+      />
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -51,31 +56,64 @@ export default function QuotePage() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      // Save to database
-      await createQuoteRequest({
-        name: data.name,
-        email: data.email,
-        phone: data.phone || null,
-        company: data.company || null,
-        shipment_type: data.shipment_type,
-        origin: data.origin,
-        destination: data.destination,
-        weight: data.weight || null,
-        dimensions: data.dimensions || null,
-        pickup_date: data.pickup_date || null,
-        additional_info: data.additional_info || null,
-      });
+      // Try to save to database (skip if fails)
+      try {
+        await createQuoteRequest({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          company: data.company || null,
+          shipment_type: data.shipment_type,
+          origin: data.origin,
+          destination: data.destination,
+          weight: data.weight || null,
+          dimensions: data.dimensions || null,
+          pickup_date: data.pickup_date || null,
+          additional_info: data.additional_info || null,
+        });
+      } catch (dbError) {
+        console.error('Database save failed (continuing with email):', dbError);
+      }
 
       // Send email via Formspree
-      await fetch('https://formspree.io/f/xanyqjvq', {
+      await fetch('https://formspree.io/f/xdaorvdg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...data,
-          _subject: 'New Quote Request',
-          type: 'Quote Request',
+          _subject: '📦 New Quote Request',
+          name: data.name,
+          email: data.email,
+          phone: data.phone || 'Not provided',
+          company: data.company || 'Not provided',
+          shipment_type: data.shipment_type,
+          origin: data.origin,
+          destination: data.destination,
+          weight: data.weight || 'Not provided',
+          dimensions: data.dimensions || 'Not provided',
+          pickup_date: data.pickup_date || 'Not provided',
+          additional_info: data.additional_info || 'None',
+          message: `
+Quote Request Details:
+
+Contact Information:
+- Name: ${data.name}
+- Email: ${data.email}
+- Phone: ${data.phone || 'Not provided'}
+- Company: ${data.company || 'Not provided'}
+
+Shipment Details:
+- Type: ${data.shipment_type}
+- Origin: ${data.origin}
+- Destination: ${data.destination}
+- Weight: ${data.weight || 'Not provided'}
+- Dimensions: ${data.dimensions || 'Not provided'}
+- Pickup Date: ${data.pickup_date || 'Not provided'}
+
+Additional Information:
+${data.additional_info || 'None'}
+          `.trim(),
         }),
       });
 
@@ -86,6 +124,7 @@ export default function QuotePage() {
 
       form.reset();
     } catch (error) {
+      console.error('Quote submission error:', error);
       toast({
         title: 'Error',
         description: 'Failed to submit quote request. Please try again.',

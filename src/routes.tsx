@@ -4,10 +4,7 @@ import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import QuotePage from './pages/QuotePage';
 import LoginPage from './pages/LoginPage';
-import AdminLayout from './pages/admin/AdminLayout';
-import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminSubmissions from './pages/admin/AdminSubmissions';
-import AdminSettings from './pages/admin/AdminSettings';
+
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -49,28 +46,9 @@ const routes: RouteConfig[] = [
     path: '/login',
     element: <LoginPage />,
   },
-  {
-    name: 'Admin',
-    path: '/admin',
-    element: <AdminLayout />,
-    children: [
-      {
-        name: 'Dashboard',
-        path: '',
-        element: <AdminDashboard />,
-      },
-      {
-        name: 'Submissions',
-        path: 'submissions',
-        element: <AdminSubmissions />,
-      },
-      {
-        name: 'Settings',
-        path: 'settings',
-        element: <AdminSettings />,
-      },
-    ],
-  },
+
+  
+
 ];
 
 export default routes;

@@ -8,6 +8,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppWrapper>
       <App />
+      
     </AppWrapper>
   </StrictMode>
 );
